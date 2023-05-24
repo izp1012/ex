@@ -1,13 +1,13 @@
-package com.study.ex1;
+package com.study.ex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ex1Application {
+public class ExApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ex1Application.class, args);
+		SpringApplication.run(ExApplication.class, args);
 	}
 
 }

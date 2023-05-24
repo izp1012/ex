@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Sping</title>
+</head>
+<style type="text/css">
+
+    html {
+        height: 100%;
+    }
+
+    .center_aligned {
+        display: table;
+        width: 100%;
+    }
+
+    .formwrapper {
+        width:100%;
+        height:100%;
+        overflow-y:auto;
+    }
+
+    .ontop {
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        position: absolute;
+        background-color:#f5f7fa;
+        color: #aaaaaa;
+        opacity: .4;
+        filter: alpha(opacity = 50);
+    }
+    #poplang {
+        z-index: 999;
+        width: 240px;
+        position: absolute;
+        color: #000000;
+        background-color: #ffffff;
+        /* To align popup window at the center of screen*/
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -135px;
+
+    }
+</style>
+<body>
+<h1>시작페이지</h1>
+<div>
+    <form action='user/login' method="post" name="frm" >
+        <div class="center_aligned">
+            <div class="pos_r" id="table" style="">
+                <div id="box">
+                    <div id="wrapper">
+                        <div class="top_img_box mar_b24" id="topimg">
+
+                        </div>
+                        <div class="mar_b24" id="header" style="display:none;"></div>
+                            <div id="loginform" style="display:block;">
+                                <div class="inputgroup" id="userid">
+                                    <div id="userid_container">
+                                        <input name="id" id="id" class="input wide mar_b8 mar_t5" placeholder="Login ID" style="display:block; ime-mode:disabled;" type="text" value="" >
+                                        <input name="password" id="password" class="input wide mar_b8 mar_t5 password" placeholder="Password" type="password"/>
+                                    </div>
+                                        <button type="submit">Log in </button>
+
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+                <div id="footer"></div>
+            </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+<a href="login/join2">회원가입Join2</a>
+<a href="login/join.html">회원가입Join</a>
+<!--</div>-->
+<!--<div sec:authorize="!isAuthenticated()">-->
+<!--    <li><a href="/user/api/user" method="post">로그인</a></li>-->
+<!--</div>-->
+</body>
+</html>
