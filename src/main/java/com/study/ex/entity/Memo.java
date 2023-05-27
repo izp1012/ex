@@ -4,13 +4,13 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table
+@Table(name="Memo_inhyo")
 @ToString
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Memo_inhyo {
+public class Memo{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mno;
