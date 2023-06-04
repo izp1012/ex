@@ -81,7 +81,7 @@ public class SampleController {
     }
 
     //타임리프 레이아웃 만들기
-    @GetMapping({"/exLayout1","/exLayout2"})
+    @GetMapping({"/exLayout1","/exLayout2","/exTemplate","exSidebar"})
     public void exLayOut1() {
         log.info("exLayOut....");
     }
