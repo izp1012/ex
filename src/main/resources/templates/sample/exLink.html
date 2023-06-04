@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>링크 처리</title>
+</head>
+껍데기 Link -> http://localhost:8081/sample/exView
+<ul>
+  <li th:each="dto, state : ${list}">
+    <a th:href="@{/sample/exView}">[[${dto}]]</a>
+  </li>
+</ul>
+sno 를 파라미터 사용해보기 -> http://localhost:8081/sample/exView?sno=1
+<ul>
+  <li th:each="dto, state : ${list}">
+    <a th:href="@{/sample/exView(sno=${dto.sno})}">[[${dto}]]</a>
+  </li>
+</ul>
+
+sno 를 path로 사용해보기 -> http://localhost:8081/sample/exView/1
+<ul>
+  <li th:each="dto, state : ${list}">
+    <a th:href="@{/sample/exView/{sno}(sno=${dto.sno})}">[[${dto}]]</a>
+  </li>
+</ul>
+
+#temporals 이용하여 format 변환하기
+<ul>
+  <li th:each="dto, state : ${list}">
+    [[${dto.sno}]] --- [[${#temporals.format(dto.regTime, 'yyyy/M/dd')}]]
+  </li>
+</ul>
+</body>
+</html>

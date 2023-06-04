@@ -34,7 +34,10 @@ dependencies {
 
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation('org.springframework.boot:spring-boot-starter-test'){
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	implementation group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-java8time', version: '3.0.4.RELEASE'
 }
 
 tasks.named('test') {
